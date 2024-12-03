@@ -3,166 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riley Mitchell - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <title>Riley Mitchell - Pachinko Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #fefcfb, #f5f3f2);
-            color: #333;
-        }
-        .banner {
-            background: #006d77;
-            color: #fefcfb;
-            text-align: center;
-            padding: 10px 0;
-            font-weight: 600;
-            font-size: 1em;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow-x: hidden;
         }
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb);
+            color: white;
+            animation: backgroundShift 5s infinite;
+        }
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .header img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 4px solid #006d77;
             margin-bottom: 20px;
+            border: 5px solid #fff;
         }
         .header h1 {
-            font-size: 2.2em;
-            font-weight: 600;
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5em;
             margin: 0;
-            color: #333;
         }
         .header p {
-            font-size: 1.1em;
-            color: #6b6b6b;
+            font-size: 1.2em;
+            margin: 10px 0 0;
         }
-        .content .section {
+        .content {
+            margin: 30px auto;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .content h2 {
+            font-size: 1.8em;
+            color: #ff6f91;
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .content h2::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 80px;
+            height: 8px;
+            background: #ff9a9e;
+            border-radius: 4px;
+            transform: translateX(-50%);
+        }
+        .section {
             margin-bottom: 40px;
         }
-        .section h2 {
-            font-family: 'Noto Serif JP', serif;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #333;
-            border-bottom: 2px solid #006d77;
-            display: inline-block;
+        .section img {
+            display: block;
+            margin: 20px auto;
+            width: 80px;
+            height: 80px;
+            background: #ff9a9e;
+            border-radius: 50%;
         }
-        .section p, .section ul {
+        .section p {
             font-size: 1.1em;
-            line-height: 1.6;
             color: #555;
-        }
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .section ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #006d77;
-        }
-        .latest-project {
-            background: #edf6f9;
-            border-radius: 8px;
-            padding: 20px;
+            line-height: 1.6;
             text-align: center;
-            margin-top: 20px;
         }
-        .latest-project a {
-            text-decoration: none;
-            color: #006d77;
-            font-weight: 600;
-            font-size: 1em;
-            border: 2px solid #006d77;
+        .button {
+            display: inline-block;
+            background: #ff6f91;
+            color: white;
+            font-size: 1.1em;
             padding: 10px 20px;
-            border-radius: 4px;
-            transition: background 0.3s, color 0.3s;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .latest-project a:hover {
-            background: #006d77;
-            color: #fff;
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .footer {
             text-align: center;
             padding: 20px;
-            font-size: 0.9em;
-            color: #6b6b6b;
-            border-top: 2px solid #eee;
+            font-size: 1em;
+            background: linear-gradient(90deg, #fad0c4, #ff6f91);
+            color: white;
+            margin-top: 20px;
         }
         .footer a {
-            color: #006d77;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .footer a:hover {
+            color: white;
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="banner">✨ New Project Out Now: <a href="#project" style="color: #fefcfb; text-decoration: underline;">Learn More</a> ✨</div>
+    <div class="header">
+        <img src="placeholder-headshot.png" alt="Your Headshot">
+        <h1>Riley Mitchell</h1>
+        <p>Bright Ideas, Big Dreams, and Fun Projects!</p>
+    </div>
 
-    <div class="container">
-        <div class="header">
-            <img src="headshot.jpg" alt="Riley Mitchell">
-            <h1>Riley Mitchell</h1>
-            <p>Tech Services Intern | Aspiring Entrepreneur | Future College Student</p>
+    <div class="content">
+        <div class="section">
+            <h2>About Me</h2>
+            <img src="placeholder-animal-1.png" alt="Dancing Animal">
+            <p>Welcome! I'm Riley, a tech enthusiast, budding entrepreneur, and lover of all things colorful and exciting. When I'm not creating or learning, I'm exploring the world of finance and real estate.</p>
         </div>
 
-        <div class="content">
-            <div class="section">
-                <h2>About Me</h2>
-                <p>Hi! I'm Riley, a senior at Vernon Hills High School. I play lacrosse and am involved in various organizations. I intend to pursue a degree in Finance and am passionate about entrepreneurship and innovation.</p>
-            </div>
-
-            <div class="section">
-                <h2>Experience</h2>
-                <ul>
-                    <li><strong>INT Business Solutions, Lincolnshire, IL</strong> – Tech Services Intern (June 2023 - August 2023, May 2024 - Present)</li>
-                    <li><strong>Great Lakes Lacrosse Officials Association (GLLOA)</strong> – Certified Official (April 2023 - Present)</li>
-                    <li><strong>Lacrosse America, Vernon Hills, IL</strong> – Playmaker, Parking and Scorekeeping (September 2023 - Present)</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Education</h2>
-                <p><strong>Vernon Hills High School, Vernon Hills, IL</strong><br>GPA: 4.57 (Weighted), 3.94 (Unweighted)</p>
-                <p>Activities: Best Buddies (President), Varsity Lacrosse (Captain), Computer Science Club (VP), Academic Resource Center (Tutor), and more.</p>
-            </div>
-
-            <div class="section" id="project">
-                <h2>Latest Project</h2>
-                <p>I'm currently working on a real estate analytics tool to help first-time investors calculate potential ROI and manage their properties. The tool integrates financial modeling with a user-friendly interface for better decision-making.</p>
-                <div class="latest-project">
-                    <a href="project.html">View Project Details</a>
-                </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <img src="placeholder-animal-2.png" alt="Cheerful Character">
+            <p>Check out my latest Pachinko-inspired project: a gamified app for financial literacy that turns learning into a party!</p>
+            <div style="text-align: center;">
+                <a href="project.html" class="button">View Project</a>
             </div>
         </div>
 
-        <div class="footer">
-            <p>Connect with me on <a href="https://www.linkedin.com/in/iamrileymitchell" target="_blank">LinkedIn</a>.</p>
+        <div class="section">
+            <h2>Get in Touch</h2>
+            <img src="placeholder-animal-3.png" alt="Friendly Creature">
+            <p>Have a fun idea or collaboration in mind? Let’s connect and create something magical together.</p>
+            <div style="text-align: center;">
+                <a href="mailto:contact@rileymitchell.com" class="button">Contact Me</a>
+            </div>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>Made with 🌟 by Riley Mitchell | <a href="https://www.linkedin.com/in/iamrileymitchell" target="_blank">LinkedIn</a></p>
     </div>
 </body>
 </html>
+
 
