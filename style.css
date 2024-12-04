@@ -6,120 +6,135 @@
 }
 
 body {
-    font-family: 'Exo 2', sans-serif;
-    background: radial-gradient(circle, #1b1b3a 30%, #000000 90%);
-    color: #fff;
-    overflow: hidden;
+    font-family: 'Fredoka One', sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    overflow-y: auto; /* Enable scrolling */
+    min-height: 100vh;
+    padding-bottom: 50px;
 }
 
-/* Neon Header */
-.neon-header {
+/* Banners */
+.banner {
+    position: fixed;
+    top: 10px;
+    width: 100%;
     text-align: center;
-    padding: 50px 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: #f7ff00;
+    color: #1a1a2e;
+    z-index: 1000;
+    padding: 10px;
+    animation: bannerMove 3s ease-in-out infinite alternate;
 }
 
-.neon-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffcc;
-    animation: glow 2s infinite alternate;
+@keyframes bannerMove {
+    0% { top: -50px; }
+    100% { top: 10px; }
 }
 
-.neon-header p {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #ff33ff;
-    text-shadow: 0 0 5px #ff33ff;
+/* Container */
+.container {
+    padding: 100px 20px 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Glowing Animation */
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ccff;
-    }
-    to {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffcc;
-    }
-}
-
-/* Sections */
+/* Section Styles */
 .section {
-    margin: 40px auto;
-    padding: 20px;
+    margin-bottom: 50px;
     text-align: center;
-    max-width: 700px;
-    border: 2px solid #ff6600;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 10px #ff6600, 0 0 20px #ff33ff inset;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .section h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    color: #ffcc00;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #f7ff00;
+    text-shadow: 2px 2px #1a1a2e;
 }
 
 .section p {
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
+.section-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #f7ff00;
+    border-radius: 10px;
+}
+
+/* Buttons */
 .action-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #000;
-    background: linear-gradient(45deg, #00ffff, #ff33ff);
+    background-color: #00adb5;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 0 10px #00ffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .action-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px #ff33ff, 0 0 30px #00ffff;
+    background-color: #007a79;
 }
 
-/* Flying Shapes */
-.flying-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #f7ff00;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid #00adb5;
+}
+
+/* Floating Shapes */
 .random-shape {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(45deg, #ff33ff, #00ffff);
+    width: 50px;
+    height: 50px;
+    background-color: #ff5733;
+    opacity: 0.8;
     border-radius: 50%;
-    box-shadow: 0 0 10px #ff33ff, 0 0 20px #00ffff;
-    animation: float 6s linear infinite;
+    animation: fall 5s infinite, rotate 3s linear infinite;
+    pointer-events: none; /* Prevent shapes from blocking clicks */
 }
 
-/* Animation for Floating Shapes */
-@keyframes float {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
+@keyframes fall {
+    0% { top: -50px; }
+    100% { top: 100vh; }
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-    font-size: 1rem;
-    background: rgba(0, 0, 0, 0.5);
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
