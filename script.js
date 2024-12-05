@@ -1,15 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.container');
+// Select elements
+const formalView = document.getElementById('formal-view');
+const slotMachineView = document.getElementById('slot-machine');
+const transformButton = document.getElementById('transform-button');
+const spinButton = document.getElementById('spin-button');
+const reels = [
+    document.getElementById('reel-1'),
+    document.getElementById('reel-2'),
+    document.getElementById('reel-3'),
+];
 
-    // Add floating shapes
-    setInterval(() => {
-        const shape = document.createElement('div');
-        shape.className = 'random-shape';
-        shape.style.left = `${Math.random() * 100}%`;
-        shape.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        container.appendChild(shape);
+// Slot machine data
+const info = ["Creative", "Real Estate Enthusiast", "Finance Pro", "Entrepreneur", "Team Leader"];
 
-        // Remove shapes after animation
-        setTimeout(() => shape.remove(), 3000);
-    }, 500);
+// Transform button functionality
+transformButton.addEventListener('click', () => {
+    formalView.classList.add('hidden');
+    slotMachineView.classList.remove('hidden');
+});
+
+// Spin functionality
+spinButton.addEventListener('click', () => {
+    reels.forEach(reel => {
+        const randomInfo = info[Math.floor(Math.random() * info.length)];
+        reel.textContent = randomInfo;
+    });
 });
