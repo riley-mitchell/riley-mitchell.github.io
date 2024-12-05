@@ -10,30 +10,24 @@
     <!-- Formal View -->
     <div id="formal-view">
         <h1>Welcome to My Website</h1>
-        <p>This website starts formal and transforms into something fun!</p>
-        <button id="transform-button">Learn More About Me</button>
+        <p>Click the button below to reveal something fun!</p>
+        <button id="transform-button">Transform</button>
     </div>
 
     <!-- Slot Machine View -->
     <div id="slot-machine" class="hidden">
-        <h1>🎰 About Me Slot Machine 🎰</h1>
-        <div class="slot">
-            <div class="reel" id="reel-1"></div>
-            <div class="reel" id="reel-2"></div>
-            <div class="reel" id="reel-3"></div>
+        <div class="machine-container">
+            <h1>🎰 About Me Slot Machine 🎰</h1>
+            <div class="slot-window">
+                <div class="reel" id="reel-1"></div>
+                <div class="reel" id="reel-2"></div>
+                <div class="reel" id="reel-3"></div>
+            </div>
+            <button id="spin-button">Spin</button>
+            <p id="result"></p>
         </div>
-        <button id="spin-button">Spin!</button>
-        <p id="result"></p>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
