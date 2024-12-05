@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const formalView = document.getElementById("formal-view");
-    const slotMachine = document.getElementById("slot-machine");
-    const transformButton = document.getElementById("transform-button");
     const spinButton = document.getElementById("spin-button");
     const reels = [
         document.getElementById("reel-1"),
@@ -10,14 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
     const resultText = document.getElementById("result");
 
-    // Slot options (graphics/emojis)
+    // Slot options (emojis)
     const slotOptions = ["🍎", "🍒", "🍇", "🔔", "💎"];
-
-    // Transition to slot machine view
-    transformButton.addEventListener("click", () => {
-        formalView.classList.add("hidden");
-        slotMachine.classList.remove("hidden");
-    });
 
     // Spin reels
     spinButton.addEventListener("click", () => {
