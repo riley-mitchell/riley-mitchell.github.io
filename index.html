@@ -3,52 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pachinko Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Formal to Fun</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Flying Banners -->
-    <div class="banner banner-1">🎉 Riley's Pachinko World 🎉</div>
-    <div class="banner banner-2">🚀 Big Dreams, Wild Fun 🚀</div>
+    <div id="formal-view">
+        <h1>Welcome to My Website</h1>
+        <p>This website starts formal and transforms into something fun!</p>
+        <button id="transform-button">Learn More About Me</button>
+    </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="lights"></div>
-            <h1>Riley Mitchell</h1>
-            <p>Welcome to a World of Fun, Finance, and Crazy Creativity!</p>
-            <img src="placeholder-header.jpg" alt="Placeholder for Header Image" class="header-image">
+    <div id="slot-machine" class="hidden">
+        <div class="slot">
+            <div class="reel" id="reel-1"></div>
+            <div class="reel" id="reel-2"></div>
+            <div class="reel" id="reel-3"></div>
         </div>
-
-        <!-- About Section -->
-        <div class="section about">
-            <h2>About Me</h2>
-            <img src="placeholder-about.jpg" alt="Placeholder for About Image" class="section-image">
-            <p>Bright, bold, and unstoppable! I'm Riley, and I bring vibrant ideas to life.</p>
-        </div>
-
-        <!-- Projects Section -->
-        <div class="section projects">
-            <h2>Projects</h2>
-            <img src="placeholder-projects.jpg" alt="Placeholder for Projects Image" class="section-image">
-            <p>Check out my latest work that combines tech and creativity in exciting new ways.</p>
-            <button class="action-button">See More 🎮</button>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section contact">
-            <h2>Contact</h2>
-            <img src="placeholder-contact.jpg" alt="Placeholder for Contact Image" class="section-image">
-            <p>Got a project idea or want to connect? Let's talk!</p>
-            <button class="action-button">Contact Me 💌</button>
-        </div>
+        <button id="spin-button">Spin!</button>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
