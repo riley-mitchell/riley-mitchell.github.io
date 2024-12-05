@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Machine Fun</title>
+    <title>Home Screen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Formal View -->
-    <div id="formal-view">
-        <h1>Welcome to My Website</h1>
-        <p>Click the button below to reveal something fun!</p>
-        <button id="transform-button">Transform</button>
-    </div>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Picture Frame Section -->
+        <div class="picture-frame">
+            <div class="placeholder">[ Your Picture Here ]</div>
+        </div>
 
-    <!-- Slot Machine View -->
-    <div id="slot-machine" class="hidden">
-        <div class="machine-container">
-            <h1>🎰 About Me Slot Machine 🎰</h1>
+        <!-- Navigation Options -->
+        <div class="navigation">
+            <button class="nav-button" id="about-me-button">About Me</button>
+            <button class="nav-button" id="projects-button">My Projects</button>
+            <button class="nav-button" id="contact-button">Contact</button>
+        </div>
+
+        <!-- Slot Machine Section -->
+        <div id="slot-machine">
+            <h2>🎰 About Me Slot Machine 🎰</h2>
             <div class="slot-window">
                 <div class="reel" id="reel-1"></div>
                 <div class="reel" id="reel-2"></div>
