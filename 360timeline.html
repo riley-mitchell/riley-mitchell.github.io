@@ -78,6 +78,23 @@
             border-radius: 8px;
             border: none;
         }
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        .image-container {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -99,9 +116,16 @@
             <div class="section" id="phase1">
                 <h2>Phase 1: Research</h2>
                 <p>During this phase, we were mainly focused on deciding exactly what we wanted to create. We knew something with video was interesting to us and we love capturing memories. Therefore, an archive of videos from our high school was the perfect option. From there, we decided something like Vimeo would be better than something like YouTube/Twitch because we wanted it to be more of a file storage website than an algorithm-based feed. Throughout our research, we came to some key conclusions. First, we figured out that we wanted to use H.264 (AVC) for video compression. This can then be paired with Handbrake or FFmpeg for encoding. Additionally, we decided that AWS and their S3 service would be best for hosting our website when we want it to go live. Finally, we came to conclusions on both the front-end and back-end of our website. The front-end will consist of HTML, CSS, and JS. The back-end will be either Django or Flask. We've started a rough draft of our website. It's very similar to YouTube at this time as that is one of our biggest inspirations.</p>
-                <div class="placeholders">
-                    <img src="youtube.jpeg" alt="Youtube" style="width: 100%; border-radius: 8px;">
-                    <img src="vimeo.jpeg" alt="Vimeo" style="width: 100%; border-radius: 8px;">
+                <div class="image-row">
+                    <div class="image-container">
+                        <img src="youtube.jpeg" alt="Youtube">
+                    </div>
+                    <div class="image-container">
+                        <img src="vimeo.jpeg" alt="Vimeo">
+                    </div>
+                    <div class="image-container">
+                        <img src="figma.jpg" alt="Figma">
+                    </div>
                 </div>
             </div>
 
@@ -114,6 +138,7 @@
                 <b>Thursday</b> - Started to transfer Figma content to physical code for Github using builder.io. Ran into quite a few problems with item sizing on the Github deployment.<br>
                 <b>Friday</b> - Used online resources to overcome sizing issues. Successfully created a rough draft of the forward-facing portion of the website. No issues faced.<br><br>
                 So far, our most major development is the website's home page. We've created a visually appealing, classic landing screen for future users. Any element that does not yet work, like images or sign-in portions, are placeholders for future implementation. From this point, we'll be able to successfully branch off in future weeks, developing sign-in logic and further polishing the design as well as functionality.
+                </p>
                 <div class="video-container">
                     <iframe src="https://drive.google.com/file/d/1PaSm8SUys-rE6w0rT8ZB9QsosS_u77yU/preview" allow="autoplay"></iframe>
                 </div>
@@ -124,6 +149,7 @@
                 <b>Wednesday</b> - Prepped the website by adding a similarly styled "Videos" page that was properly formatted for the video I created on Thursday. Had a couple issues with embedding the YouTube video, but the process was relatively smooth other than that.<br>
                 <b>Thursday</b> - Began utilizing the 360 camera for video production purposes. Recorded my entire period of work as a timelapse using the camera. Ran into some small issues initially with connecting the camera's recording to my phone photo library.<br><br>
                 The project is really coming together! The website design is definitely suitable for final production, so now it's time to begin preparing more user-centric elements, like finishing the Google sign-on feature and allowing video uploads. We're beginning to think that users uploading to YouTube first and then embedding from there might be ideal for hosting purposes (GitHub has strict limitations on hosting bandwith).
+                </p>
                 <div class="video-container">
                     <iframe src="https://drive.google.com/file/d/1euWQLk8F-MvoZx52coX09QPHl9xQtlpG/preview" allow="autoplay"></iframe>
                 </div>
@@ -133,9 +159,9 @@
                 <b>Tuesday</b> - <br>
                 <b>Wednesday</b> - <br>
                 <b>Thursday</b> - <br>
-                <b>Friday</b> - <br><br>
+                <b>Friday</b> - <br><br></p>
                 <div class="video-container">
-                    <iframe src="https://drive.google.com/file/d/1psaj_y5PmTIbCiB05bxtCGPrp6h5vGar/view?usp=sharing" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1psaj_y5PmTIbCiB05bxtCGPrp6h5vGar/preview" allow="autoplay"></iframe>
                 </div>
             </div>
 
@@ -159,5 +185,3 @@
 
 </body>
 </html>
-
-
