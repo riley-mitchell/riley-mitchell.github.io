@@ -27,11 +27,26 @@
             text-align: center;
             padding-bottom: 20px;
             border-bottom: 2px solid #ddd;
+            position: relative;
         }
         .header h1 {
             margin: 20px 0 10px;
             font-size: 2.5em;
             color: #333;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #555;
         }
         .timeline-nav {
             display: flex;
@@ -102,9 +117,12 @@
     <div class="container">
         <div class="header">
             <h1>Project Timeline</h1>
+            <a href="#" class="project-link">Visit Project</a>
         </div>
 
         <div class="timeline-nav">
+            <a href="#problem">Problem Statement</a>
+            <a href="#ai">AI Approach</a>
             <a href="#phase1">Phase 1</a>
             <a href="#phase2">Phase 2</a>
             <a href="#phase3">Phase 3</a>
@@ -113,6 +131,16 @@
         </div>
 
         <div class="content">
+            <div class="section" id="problem">
+                <h2>Problem Statement</h2>
+                <p>text</p>
+            </div>
+
+            <div class="section" id="ai">
+                <h2>AI Approach</h2>
+                <p>text</p>
+            </div>
+
             <div class="section" id="phase1">
                 <h2>Phase 1: Research</h2>
                 <p>During this phase, we were mainly focused on deciding exactly what we wanted to create. We knew something with video was interesting to us and we love capturing memories. Therefore, an archive of videos from our high school was the perfect option. From there, we decided something like Vimeo would be better than something like YouTube/Twitch because we wanted it to be more of a file storage website than an algorithm-based feed. Throughout our research, we came to some key conclusions. First, we figured out that we wanted to use H.264 (AVC) for video compression. This can then be paired with Handbrake or FFmpeg for encoding. Additionally, we decided that AWS and their S3 service would be best for hosting our website when we want it to go live. Finally, we came to conclusions on both the front-end and back-end of our website. The front-end will consist of HTML, CSS, and JS. The back-end will be either Django or Flask. We've started a rough draft of our website. It's very similar to YouTube at this time as that is one of our biggest inspirations.</p>
