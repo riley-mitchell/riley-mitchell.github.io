@@ -116,6 +116,26 @@
             font-size: 0.9em;
             color: #555;
         }
+        .custom-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .custom-layout .image-container:nth-child(3) {
+            grid-row: span 2;
+        }
+        .custom-layout .image-container:not(:nth-child(3)) {
+            aspect-ratio: 1.5/1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .custom-layout .image-container:not(:nth-child(3)) img {
+            flex: 1;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -250,7 +270,7 @@
                 MVP complete! Super happy with what we were able to accomplish here. Special shout out to Jaewook, my fellow classmate working on this project with me. The job is not finished though. Definitely going to make some more changes and improve VH360° in the future.
                 </p>
 
-                <div class="image-row">
+                <div class="custom-layout">
                     <div class="image-container">
                         <img src="emailJS.jpg" alt="emailJS auto-reply template">
                         <div class="caption">emailJS auto-reply template</div>
@@ -263,9 +283,6 @@
                         <img src="editor.jpg" alt="insta360 video editor">
                         <div class="caption">Insta360 video editor</div>
                     </div>
-                </div>
-                
-                <div class="image-row">
                     <div class="image-container">
                         <img src="meandjae.jpg" alt="jaewook and I">
                         <div class="caption">Jaewook and I</div>
